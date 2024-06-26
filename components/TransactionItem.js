@@ -1,4 +1,3 @@
-// components/TransactionItem.js
 import React, { memo } from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 

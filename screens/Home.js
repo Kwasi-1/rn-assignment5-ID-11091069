@@ -1,4 +1,3 @@
-// screens/Home.js
 import React from "react";
 import { View, Text, StyleSheet, FlatList, StatusBar } from "react-native";
 import { useTheme, lightTheme, darkTheme } from '../context/ThemeContext';
@@ -17,13 +16,16 @@ const Home = () => {
     <View style={[styles.container, { backgroundColor: theme.background }]}>
       <Header theme={theme} />
       <MyCard theme={theme} />
-      <FlatList 
-        data={actionData}
-        horizontal
-        renderItem={({item}) => <Action item={item} theme={theme} />}
-        keyExtractor={item => item.id}
-        showsHorizontalScrollIndicator={false} 
-      />
+      <View style={styles.actionButton}>
+        <FlatList 
+          contentContainerStyle={styles.flatListContent}
+          data={actionData}
+          horizontal
+          renderItem={({item}) => <Action item={item} theme={theme} />}
+          keyExtractor={item => item.id}
+          showsHorizontalScrollIndicator={false} 
+        />
+      </View>
       <View style={styles.sectionHeader}>
         <Text style={[styles.sectionTitle, { color: theme.text }]}>Transaction</Text>
         <Text style={[styles.sectionSubTitle, { color: '#0262f3' }]}>See All</Text>
@@ -47,6 +49,10 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+  },
+  actionButton:{
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   sectionHeader: {
     flexDirection: 'row',
