@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, View } from 'react-native';
+import { Image } from 'react-native';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { ThemeProvider, useTheme, lightTheme, darkTheme } from './context/ThemeContext';
@@ -48,14 +48,16 @@ const MainNavigator = () => {
             );
           },
           headerShown: false,
-          tabBarStyle: {
-            backgroundColor: isDarkTheme ? darkTheme.tabsBgColor : lightTheme.tabsBgColor,
-          },
+          tabBarActiveTintColor: '#0262f3',
+          tabBarInactiveTintColor: 'gray',
+          tabBarStyle: [
+            {
+              display: 'flex',
+              backgroundColor: isDarkTheme ? darkTheme.tabsBgColor : lightTheme.tabsBgColor,
+            },
+            null
+          ],
         })}
-        tabBarOptions={{
-          activeTintColor: '#0262f3',
-          inactiveTintColor: 'gray',
-        }}
       >
         <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="My Cards" component={MyCards} />

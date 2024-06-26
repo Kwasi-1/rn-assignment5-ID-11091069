@@ -1,4 +1,3 @@
-// components/MyCard.js
 import React from "react";
 import { View, Image, StyleSheet } from "react-native";
 
@@ -12,11 +11,16 @@ const MyCard = ({ theme }) => {
 
 const styles = StyleSheet.create({
   container: {
+    height: 260,
+    width: '100%',
     paddingVertical: 20,
-    flex: 1,
+    alignItems: 'center', 
+    justifyContent: 'center', 
   },
   card: {
-    // Adjust width and height as needed
+    height: '100%',
+    width: '100%',
+    resizeMode: 'contain' 
   }
 });
 

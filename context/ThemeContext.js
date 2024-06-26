@@ -24,7 +24,7 @@ export const darkTheme = {
   color: '#333',
   tabsBgColor: '#27273a',
   borderColor: '#1c1d2a',
-  iconBackground: '#1e1e2d',
+  iconBackground: 'gray',
   headerBackground: '#161622',
   transactionBackground: '#161622',
   transactionText: '#fff',

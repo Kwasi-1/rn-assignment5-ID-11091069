@@ -9,7 +9,7 @@ const Header = ({ theme }) => {
         <Image source={require('../assets/profile.png')} style={styles.profile} />
         <View>
           <Text style={[styles.welcomeText, { color: theme.subText }]}>Welcome Back</Text>
-          <Text style={[styles.userName, { color: theme.text }]}>Eric Atsu</Text>
+          <Text style={[styles.userName, { color: theme.text }]}>Afful Nana Kwasi</Text>
         </View>
       </View>
       <View style={[styles.searchIconContainer, { backgroundColor: theme.iconBackground }]}>
